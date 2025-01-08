@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchReviews, submitReview } from "../../features/reviewSlice"; // Import thunks
 import Magnifier from "react-magnifier";
+import { useNavigate } from "react-router-dom";
 
 const Review = () => {
+  const navigate = useNavigate();
   const { car } = useSelector((state) => state.carReducer);
   const [formData, setFormData] = useState({
     clientName: "",
@@ -30,6 +32,8 @@ const Review = () => {
   const handleBuyNow = () => {
     // Add the car to the cart or perform any other action required for buying it
     console.log("Buying car:", car);
+    alert("Car bought successfully");
+    navigate("/");
   };
 
   const handleInputChange = (e) => {

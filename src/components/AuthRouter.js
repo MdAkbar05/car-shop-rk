@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigate, useLocation } from "react-router-dom";
 
-const authenticated = "samratakbar667466@gmail.com";
+const authenticated = "admin@gmail.com";
 const AuthRouter = ({ children }) => {
   const location = useLocation();
 

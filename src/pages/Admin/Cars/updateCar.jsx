@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { updateCar } from "../../../features/carSlice";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const UpdateCar = ({ car }) => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     carBrand: car?.carBrand || "",
@@ -38,6 +40,7 @@ const UpdateCar = ({ car }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(updateCar({ id: car._id, carData: formData }));
+    alert("Car updated successfully");
   };
 
   return (

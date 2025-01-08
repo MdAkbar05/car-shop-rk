@@ -17,7 +17,7 @@ import { MdOutlineMenu, MdOutlineMenuOpen } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../features/userSlice";
 
-const authenticated = "samratakbar667466@gmail.com";
+const authenticated = "admin@gmail.com";
 export function Header() {
   const navigate = useNavigate();
   const [profile, setProfile] = useState();
